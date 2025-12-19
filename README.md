@@ -1,16 +1,138 @@
-# React + Vite
+# 📝 Task Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Task Management (Todo) Application** built using **React JS**, **Tailwind CSS**, and **Redux Toolkit**. Tasks are fetched from a **dummy JSON file** to simulate API-based data handling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* ➕ Add new tasks
+* ✏️ Edit existing tasks
+* 🗑️ Delete tasks
+* ✅ Mark tasks as completed
+* 📦 Global state management using **Redux Toolkit**
+* ⚡ Responsive UI with **Tailwind CSS**
+* 📄 Fetch tasks from a dummy `todo.json` file
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Frontend:** React JS
+* **Styling:** Tailwind CSS
+* **State Management:** Redux Toolkit
+* **Data Source:** Dummy JSON
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   ├── ADDTask.jsx
+│   ├── EditTask.jsx
+│   └── TaskList.jsx
+├── features/
+│   ├── store.js
+│   └── taskSlice.js
+├── data/
+│   └── todo.json
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/santhoshwebdev11-design/Task-Management-App-using-Redux-tool-kit
+```
+
+2. Navigate to the project directory
+
+```bash
+cd task-management-app
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Start the development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📌 Redux Toolkit Overview
+
+* Centralized task state
+* Uses `createSlice` for reducers and actions
+* Clean and scalable state management
+
+```js
+const taskSlice = createSlice({
+  name: "tasks",
+  initialState,
+  reducers: {
+    addTask,
+    deleteTask,
+    updateTask,
+  },
+});
+```
+
+---
+
+## 📄 Dummy JSON Example
+
+```json
+[
+  {
+    "id": 1,
+    "title": "Learn Redux Toolkit",
+    "completed": false
+  }
+]
+```
+
+---
+
+## 🌱 Future Enhancements
+
+* Replace dummy JSON with real API
+* Add user authentication
+* Persist tasks using LocalStorage or backend
+* Improve mobile responsiveness
+
+---
+
+## 🌐 Live Demo (Vercel)
+
+The project is deployed using **Vercel**.
+
+🔗 **Live URL:** [https://task-manager-vercel-three.vercel.app/](https://task-manager-vercel-three.vercel.app/)
+
+---
+
+## 🙌 Author
+
+**Santhosh N**
+
+* GitHub: [https://github.com/santhoshwebdev11-design/task-management-app-using-redux-tool-kit1](https://github.com/santhoshwebdev11-design/task-management-app-using-redux-tool-kit1)
+* LinkedIn: [https://linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
+
+---
+
+## ⭐ Support
+
+If you like this project, please ⭐ the repository to support my learning journey!
